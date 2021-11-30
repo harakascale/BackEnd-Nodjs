@@ -1,5 +1,5 @@
 {
-  "name": "mean-course-app",
+  "name": "backend-mean-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

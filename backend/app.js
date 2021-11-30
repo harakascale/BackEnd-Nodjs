@@ -8,11 +8,12 @@ const userRoutes  = require("./routes/user");
 
 const app = express();
 
-const passwordForMongoDB =process.env.MONGO_ATLAS_PW 
+const passwordForMongoDB = process.env.MONGO_ATLAS_PW 
+const jwtKey = process.env.JWT_KEY
 
 
-mongoose.connect(process.env.MONGODB_URI ||
-  "mongodb+srv://gwhyte2021:"+ passwordForMongoDB +"@cluster0.ipz87.mongodb.net/node-angular?retryWrites=true&w=majority")
+mongoose.connect(
+  "mongodb+srv://gwhyte2021:"+passwordForMongoDB +"@cluster0.ipz87.mongodb.net/node-angular?retryWrites=true&w=majority")
   .then(() => {
     console.log('Connected to database')
   })
